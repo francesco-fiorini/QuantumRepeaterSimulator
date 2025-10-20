@@ -389,7 +389,7 @@ if __name__ == '__main__':
         'p_s': 0.0002,
         'dim_photonic':2
     }
-    n_rounds = 1  # Example: 3 rounds of purification
+    n_rounds = 1  # Rounds of purification
     results = extended_sim_with_purification_n_rounds(params, n_rounds, num_trials=20000)
     for outcome, data in results.items():
         print(f"\nOutcome {outcome}:")
