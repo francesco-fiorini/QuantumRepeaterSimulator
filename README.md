@@ -22,7 +22,7 @@ All physical operations are modeled using **Kraus operators**, **beam-splitter u
 4. [Simulation Flow](#simulation-flow)  
 5. [Installation](#installation)  
 6. [Usage](#usage)  
-7. [Output](#output)  
+7. [Contirbuting](#contirbuting)  
 8. [License](#license)  
 
 ---
@@ -91,3 +91,44 @@ The simulator is modular, composed of clearly separated stages:
 ### Installation via pip
 ```bash
 pip install qutip numpy matplotlib
+```
+
+### Clone the repository
+```bash
+git clone https://github.com/francesco-fiorini/QuantumRepeaterSimulator.git
+cd QuantumRepeaterSimulator
+```
+
+## Usage
+
+### Set the network parameters and run the simulator
+You can configure all simulation parameters directly in the params dictionary at the end of the script, including:
+
+P — emission probability
+
+η_c — fiber transmissivity
+
+η_t — transduction efficiency
+
+η_qb, η_ph — coupling efficiencies
+
+n̄ — thermal photon number
+
+p_cnot, p_h, p_t, p_s — gate and depolarizing noise levels
+
+ε — measurement error probability
+
+dim_photonic — photonic Hilbert space truncation
+
+```bash
+python tesqr_simulator.py
+```
+
+## Contributing
+Contributions, bug reports, and feature requests are welcome!
+Please reach out at: francesco.fiorini@phd.unipi.it
+
+---
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
