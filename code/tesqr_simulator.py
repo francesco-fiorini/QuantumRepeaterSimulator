@@ -396,7 +396,7 @@ if __name__ == '__main__':
         print(f"  Probability = {data['probability']:.4f}")
         print(f"  Fidelity    = {data['fidelity']:.4f}")
 
-        # Se esiste la matrice densità media, la stampiamo
+    
         if data['avg_rho'] is not None:
             print("  Average density matrix (ρ̄_B1B2):")
             print(data['avg_rho'])
