@@ -389,10 +389,20 @@ if __name__ == '__main__':
         'p_s': 0.0002,
         'dim_photonic':2
     }
-    n_rounds = 1  # rounds of purification
+    n_rounds = 1  # Example: 3 rounds of purification
     results = extended_sim_with_purification_n_rounds(params, n_rounds, num_trials=20000)
     for outcome, data in results.items():
-        print(f"Outcome {outcome}: Probability = {data['probability']:.4f}, Fidelity = {data['fidelity']:.4f}")
+        print(f"\nOutcome {outcome}:")
+        print(f"  Probability = {data['probability']:.4f}")
+        print(f"  Fidelity    = {data['fidelity']:.4f}")
+
+        # Se esiste la matrice densità media, la stampiamo
+        if data['avg_rho'] is not None:
+            print("  Average density matrix (ρ̄_B1B2):")
+            print(data['avg_rho'])
+        else:
+            print("  No density matrix available for this outcome.")
+
 
     # Plot the average density matrices
     outcomes = [('g', 'g'), ('g', 'e'), ('e', 'g'), ('e', 'e')]
