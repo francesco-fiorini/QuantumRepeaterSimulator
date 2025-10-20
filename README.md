@@ -112,9 +112,9 @@ P — emission probability
 
 η_qb, η_ph — coupling efficiencies
 
-n̄ — thermal photon number
+n̄ — environmental photon number
 
-p_cnot, p_h, p_t, p_s — gate and depolarizing noise levels
+p_cnot, p_h, p_t, p_s — gate error probability (depolarizing noise levels)
 
 ε — measurement error probability
 
