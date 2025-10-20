@@ -22,7 +22,7 @@ All physical operations are modeled using **Kraus operators**, **beam-splitter u
 4. [Simulation Flow](#simulation-flow)  
 5. [Installation](#installation)  
 6. [Usage](#usage)  
-7. [Contirbuting](#contirbuting)  
+7. [Contributing](#contributing)  
 8. [License](#license)  
 
 ---
