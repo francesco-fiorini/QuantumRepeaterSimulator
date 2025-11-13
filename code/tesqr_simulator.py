@@ -1,3 +1,5 @@
+# Author: Francesco Fiorini, University of Pisa, Italy
+# francesco.fiorini@phd.unipi.it
 
 import qutip as qt
 from qutip.qip.operations import cnot
