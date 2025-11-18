@@ -119,7 +119,7 @@ def apply_loss_channel(rho, eta, rho_env, mode_index, total_modes):
     theta = np.arccos(np.sqrt(eta))
     U = (theta * (a_op.dag() * b_op - a_op * b_op.dag())).expm()
     rho_tot = U * qt.tensor(rho, rho_env) * U.dag()
-    return rho_tot.ptrace(list(range(total_modes + 1)))
+    return rho_tot.ptrace(list(range(total_modes + 1))) # Partial trace over the environment subsystem (last index)
 
 def simulate_model2_partial_probabilistic(P, eta_c, eta_t, n_bar, dim_photonic):
     """
