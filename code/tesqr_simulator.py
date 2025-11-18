@@ -240,7 +240,7 @@ def purify_pair_density(rho_BM1_rot, rho_BM2_rot, p_cnot, epsilon):
     rho_total = (M_g_M2 * rho_total * M_g_M2.dag()) / p_g_M2 if outcome_M2 == 'g' else (M_e_M2 * rho_total * M_e_M2.dag()) / p_e_M2
 
     if outcome_B2 == outcome_M2:
-        rho_B1M1_rot = rho_total.ptrace([0, 1])
+        rho_B1M1_rot = rho_total.ptrace([0, 1])  # We trace out B2 and M2 ([2,3])
         return rho_B1M1_rot, True
     return None, False
 
@@ -250,7 +250,7 @@ def perform_purification_rounds(n, params):
     for _ in range(2**n):
         psi = simulate_model2_partial_probabilistic(params['P'], params['eta_c'], params['eta_t'], params['n_bar'],params['dim_photonic'])
         psi = apply_coupling_state_vector(psi, params['eta_qb'], params['eta_ph'],params['dim_photonic'])
-        rho_BM = psi.ptrace([1, 2])
+        rho_BM = psi.ptrace([1, 2])  # We trace out A subsystem (index 0)
         rho_BM_rot = apply_U_rot_with_noise(rho_BM, params['p_s'])
         rho_list.append(rho_BM_rot)
 
@@ -315,7 +315,7 @@ def imperfect_swap_and_measure_density(rho_4q, p_cnot, p_h, p_t, epsilon):
     outcome2 = 'g' if np.random.rand() < p_g2 else 'e'
     rho_4q = (M_g2 * rho_4q * M_g2.dag()) / p_g2 if outcome2 == 'g' else (M_e2 * rho_4q * M_e2.dag()) / p_e2
 
-    rho_B1B2 = rho_4q.ptrace([0, 2])
+    rho_B1B2 = rho_4q.ptrace([0, 2]) #We trace out M1 and M2 ([1,3])
     return (outcome1, outcome2), rho_B1B2
 
 # --- Main Simulation with Multiple Purification Rounds ---
