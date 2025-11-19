@@ -114,7 +114,7 @@ def apply_loss_channel(rho, eta, rho_env, mode_index, total_modes):
     # build full tensor: [photonic modes..., qubit B, environment]
     ops = [I_ph] * total_modes + [I_q] + [I_aux]
     a_op = qt.tensor(*(ops[:mode_index] + [a] + ops[mode_index+1:]))  # [a, I_q, I_aux]
-    b_op = qt.tensor(*([I_ph] * total_modes + [I_q, b]))
+    b_op = qt.tensor(*([I_ph] * total_modes + [I_q, b])) # [I_ph, I_q, b]
 
     theta = np.arccos(np.sqrt(eta))
     U = (theta * (a_op.dag() * b_op - a_op * b_op.dag())).expm()
