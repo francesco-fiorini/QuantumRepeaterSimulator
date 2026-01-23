@@ -1,6 +1,6 @@
 # TESQR Repeater Chain Simulator
 
-This repository contains a **Python simulator** built with the [QuTiP library](http://qutip.org/) for modeling **Teleporation Enabled Superconducting Quantum Repeater (TESQR)** protocols in entanglement distribution links.
+This repository contains a **Python simulator** built with the [QuTiP library](http://qutip.org/) for modeling **Teleportation-Enabled Superconducting Quantum Repeater (TESQR)** protocols in entanglement distribution links.
 
 The simulator models realistic **hybrid quantum repeater links** that include:
 
