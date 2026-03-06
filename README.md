@@ -21,9 +21,10 @@ All physical operations are modeled using **Kraus operators**, **beam-splitter u
 3. [Architecture](#architecture)  
 4. [Simulation Flow](#simulation-flow)  
 5. [Installation](#installation)  
-6. [Usage](#usage)  
-7. [Contributing](#contributing)  
-8. [License](#license)  
+6. [Usage](#usage)
+7. [Acknowledgment](#acknowledgment) 
+8. [Contributing](#contributing)  
+9. [License](#license)  
 
 ---
 
@@ -123,6 +124,8 @@ dim_photonic — photonic Hilbert space truncation
 ```bash
 python tesqr_simulator.py
 ```
+
+## Acknowledgement
 
 ## Contributing
 Contributions, bug reports, and feature requests are welcome!
