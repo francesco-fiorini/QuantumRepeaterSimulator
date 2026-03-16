@@ -121,6 +121,8 @@ p_cnot, p_h, p_t, p_s — gate error probability (depolarizing noise levels)
 
 dim_photonic — photonic Hilbert space truncation
 
+n_rounds — rounds of purification
+
 ```bash
 python tesqr_simulator.py
 ```
